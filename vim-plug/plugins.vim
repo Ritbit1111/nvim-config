@@ -1,11 +1,12 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 "Autocompletion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Autocompletion python
-Plug 'deoplete-plugins/deoplete-jedi'
+" Plug 'deoplete-plugins/deoplete-jedi'
 " Not using this for Autocompletion bit for goto definition
-Plug 'davidhalter/jedi-vim'
+" Plug 'davidhalter/jedi-vim'
 
 " For highlighting in python
 " Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
@@ -24,7 +25,7 @@ Plug 'junegunn/fzf.vim'
 " Start screen
 Plug 'mhinz/vim-startify'
 " Like tagbar
-Plug 'liuchengxu/vista.vim'
+" Plug 'liuchengxu/vista.vim'
 
 Plug 'lervag/vimtex'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

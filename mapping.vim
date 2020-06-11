@@ -93,5 +93,5 @@ map <A-i> :Limelight!!<CR>
 map <A-g> :Goyo<CR>
 
 "Use tab to move down and shift tab to move up the list for autocompletion
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-inoremap <expr><S-Tab> pumvisible() ? "\<c-p>" : "\<S-tab>"
+" inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+" inoremap <expr><S-Tab> pumvisible() ? "\<c-p>" : "\<S-tab>"
