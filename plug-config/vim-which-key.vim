@@ -32,8 +32,32 @@ let g:which_key_map['g'] = [ ':Rg'      		   , 'Grep FZF .' ]
 let g:which_key_map['G'] = [ ':Rg!'      		   , 'g + Full Screen' ]
 let g:which_key_map['m'] = [ ':Marks'                      , 'Marks list' ]
 let g:which_key_map['n'] = [ ':bn'                    	   , 'Next Buffer' ]
+let g:which_key_map['p'] = [ ':bp'                    	   , 'Prev Buffer' ]
+let g:which_key_map['w'] = [ ':w'                    	   , 'Write To File' ]
 let g:which_key_map['q'] = [ ':conf qa'                    , 'Quit all' ]
 let g:which_key_map['x'] = [ ':conf bd'                    , 'Delete Buffer' ]
 
-nnoremap <leader>m :Marks<CR>
+let g:which_key_map.e = {
+	\'name' : '+edit',
+	\'i'    : [':e $MYVIMRC', 'Open init.vim'],
+	\'w'    : [':e ~/.config/nvim/plug-config/vim-which-key.vim', 'Open which key'],
+	\'m'    : [':e ~/.config/nvim/mapping.vim', 'Open general mapping']
+	\}
+let g:which_key_map.t = {
+      \ 'name' : '+terminal' ,
+      \ ';' : [':FloatermNew --wintype=popup --height=6'        , 'terminal'],
+      \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
+      \ 'p' : [':FloatermNew python3'                            , 'python'],
+      \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
+      \ 't' : [':FloatermToggle'                                , 'toggle'],
+      \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
+      \ }
+
+let g:which_key_map.d = {
+      \ 'name' : '+todo' ,
+      \ 'a' : [':CocCommand todolist.create'        , 'add'],
+      \ 'u' : [':CocCommand todolist.upload'        , 'Upload to gist'],
+      \ 'c' : [':CocCommand todolist.clear'         , 'Clear all todos'],
+      \ 'd' : [':CocList todolist'                   , 'Open Todo'],
+      \ }
 call which_key#register('<Space>', "g:which_key_map")

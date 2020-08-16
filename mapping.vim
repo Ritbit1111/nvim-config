@@ -18,7 +18,7 @@
 " Quit all !		: q
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""
 " Mouse setting
 function! ToggleMouse()
     " check if mouse is enabled
@@ -32,6 +32,9 @@ function! ToggleMouse()
 endfunc
 
 " I tried to make a function but unsuccessful
+
+nnoremap <expr> j (v:count > 4 ? "m'" . v:count . 'j' : 'gj')
+nnoremap <expr> k (v:count > 4 ? "m'" . v:count . 'k' : 'gk')
 
 nnoremap <silent> <A-m> :call ToggleMouse()<CR>
 nnoremap <silent> <esc><esc> :silent! nohls<cr>
@@ -73,6 +76,7 @@ vnoremap <leader>{ <esc>`<i{<esc>`>la}<esc>
 vnoremap <leader>} <esc>`<i{<esc>`>la}<esc>
 vnoremap <leader>9 <esc>`<i(<esc>`>la)<esc>
 vnoremap <leader>0 <esc>`<i(<esc>`>la)<esc>
+autocmd FileType tex iabbrev :m $$<Esc>i
 
 
 " Plugin mappings
@@ -80,9 +84,9 @@ vnoremap <leader>0 <esc>`<i(<esc>`>la)<esc>
 "  FZF
 
 " Neomake and format
-nnoremap <A-c> :NeomakeToggle<CR> :NeomakeClean<CR>
+nnoremap <A-c> :NeomakeToggleBuffer<CR> :NeomakeClean<CR>
 " map <A-c> call ToggleNeomake()
-nnoremap <leader>p :Neoformat<CR>
+" nnoremap <leader>p :Neoformat<CR>
 
 "Quick scope toggle
 " Note that you must use nmap/xmap instead of their non-recursive versions (nnoremap/xnoremap).
@@ -91,7 +95,10 @@ xmap <M-q> <plug>(QuickScopeToggle)
 
 map <A-i> :Limelight!!<CR>
 map <A-g> :Goyo<CR>
-
+" nmap <C-s> <Plug>MarkdownPreview
+" nmap <M-s> <Plug>MarkdownPreviewStop
+let g:mkdp_markdown_css='/home/riteshkr/.local/lib/github-markdown.css'
+nmap <leader>c <Plug>MarkdownPreviewToggle
 "Use tab to move down and shift tab to move up the list for autocompletion
 " inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 " inoremap <expr><S-Tab> pumvisible() ? "\<c-p>" : "\<S-tab>"

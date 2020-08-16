@@ -12,10 +12,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 "Linter and maker
 Plug 'neomake/neomake'
-Plug 'sbdchd/neoformat'
+" Plug 'sbdchd/neoformat'
 
 Plug 'SirVer/ultisnips'
-
 Plug 'honza/vim-snippets'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -27,15 +26,24 @@ Plug 'mhinz/vim-startify'
 " Like tagbar
 " Plug 'liuchengxu/vista.vim'
 
+" For Latex support : localleaderkey : ,  for this plugin only
 Plug 'lervag/vimtex'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Plug 'voldikss/vim-floaterm'
+
 Plug 'tpope/vim-fugitive'
 " Repeat stuff with regular .
 Plug 'tpope/vim-repeat'
 " Surround : yank surrounding ysiw(, delete surrounding : dsiw
 Plug 'tpope/vim-surround'
 " Generates pair of (), '' etc
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 " Commenting using gc<motion>
 Plug 'vim-scripts/tComment'
 " Plug 'tpope/vim-commentary'

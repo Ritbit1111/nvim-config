@@ -18,8 +18,8 @@ let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
 " let $FZF_DEFAULT_COMMAND="rg --files --hidden"
 " let $FZF_DEFAULT_COMMAND="rg"
 " let $FZF_DEFAULT_COMMAND="find -L"
-let $FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git -E __pycache__ -E .pylint.d "
-
+" let $FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git -E __pycache__ -E .pylint.d -E snap -E .mozilla -E .local"
+let $FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude "[.][a-bd-zA-Z]*" -E ".c[a-np-zA-Z]*" --exclude "[.][a-bd-zA-Z]*" -E __pycache__ -E snap'
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =

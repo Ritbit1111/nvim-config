@@ -16,7 +16,12 @@ set encoding=utf-8
 set inccommand=nosplit
 set clipboard=unnamedplus
 set completeopt-=PREVIEW
-
+au BufNewFile,BufRead *.py
+    \ set expandtab       |" replace tabs with spaces
+    \ set autoindent      |" copy indent when starting a new line
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:sneak#label = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

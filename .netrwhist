@@ -1,8 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/etc/lightdm/lightdm.conf.d'
+let g:netrw_dirhist_1='/home/riteshkr/node_modules/eslint-utils'
+let g:netrw_dirhist_0='/home/riteshkr/Videos'
+let g:netrw_dirhist_9='/etc/lightdm'
+let g:netrw_dirhist_8='/home/riteshkr/work/ddp_work/model-step/test_vs_pspice'
+let g:netrw_dirhist_7='/home/riteshkr/.oh-my-zsh'
 let g:netrw_dirhist_6='/home/riteshkr/Dropbox/.dropbox.cache'
 let g:netrw_dirhist_5='/var/log'
 let g:netrw_dirhist_4='/etc/cron.daily'
 let g:netrw_dirhist_3='/home/riteshkr/.config/nvim/plug-config'
-let g:netrw_dirhist_2='/home/riteshkr/.local/share/nvim/plugged/vim-colorschemes/colors'
-let g:netrw_dirhist_1='/home/riteshkr/.config/nvim/themes'
